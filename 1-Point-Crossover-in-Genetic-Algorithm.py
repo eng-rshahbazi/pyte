@@ -1,26 +1,26 @@
 
-# library to generate a random number 
+# lib to generate a random number 
 import random 
   
-# function for implementing the single-point crossover 
-def crossover(l, q): 
+# function for implementing the 1-point crossover 
+def crossover(l, R): 
   
-# converting the string to list for performing the crossover 
+# converting the string to list for crossover 
     l = list(l) 
-    q = list(q) 
+    R = list(R) 
   
-# generating the random number to perform crossover 
+# generating the random number to  crossover 
     k = random.randint(0, 15) 
     print("Crossover point :", k) 
   
-# interchanging the genes 
+# swap the genes 
     for i in range(k, len(s)): 
-        l[i], q[i] = q[i], l[i] 
+        l[i], R[i] = R[i], l[i] 
     l = ''.join(l) 
-    q = ''.join(q) 
+    R = ''.join(R) 
     print(l) 
-    print(q, "\n\n") 
-    return l, q 
+    print(R, "\n\n") 
+    return l, R 
   
   
 # patent chromosomes: 
@@ -30,8 +30,7 @@ p = '1000110011011111'
 print("Parents") 
 print("P1 :", s) 
 print("P2 :", p, "\n") 
-  
-# function calling and storing the off springs for  
+ 
 # next generation crossover 
 for i in range(5): 
     print("Generation ", i+1, "Childrens :") 
