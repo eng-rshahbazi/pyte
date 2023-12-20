@@ -12,3 +12,4 @@ def uniform_binary_crossover(parent_one, parent_two):
             child_one += parent_two[i]
             child_two += parent_one[i]
     return child_one, child_two
+print(child_one, child_two)
